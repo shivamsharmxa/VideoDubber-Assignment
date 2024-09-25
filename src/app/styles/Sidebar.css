@@ -1,0 +1,75 @@
+/* Sidebar.css */
+
+.sidebar {
+    width: 80px; /* Set a fixed width for the sidebar */
+    height: 100vh; /* Full height */
+    background-color: #17171e; /* Dark background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px; /* Space for toggle button */
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    transition: transform 0.3s ease; /* Smooth transition for opening/closing */
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-100%); /* Hide the sidebar */
+  }
+  
+  .sidebar nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width */
+    align-items: center; /* Center items */
+  }
+  
+  .sidebar-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width */
+    height: 60px; /* Height of each link */
+    color: white; /* Icon color */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+    margin-bottom: 30px; /* Increased space between icons */
+  }
+  
+  .sidebar-link:last-child {
+    margin-bottom: 0; /* Remove margin for last icon */
+  }
+  
+  .sidebar-link:hover {
+    transform: scale(1.2); /* Slightly increase size on hover */
+  }
+  
+  .sidebar-link svg {
+    font-size: 28px; /* Larger icon size */
+  }
+  
+  /* Toggle button styles */
+  .toggle-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    position: fixed; /* Keep it fixed in the viewport */
+    top: 20px; /* Position it at the edge */
+    left: 20px; /* Position it to the right of the sidebar */
+    z-index: 1001; /* Above the sidebar */
+  }
+  
+  /* Language icons section */
+  .language-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Push to the bottom */
+    margin-bottom: 20px; /* Add space at the bottom of the language icons */
+  }
+  
+  body{
+    background-color: black;
+  }
